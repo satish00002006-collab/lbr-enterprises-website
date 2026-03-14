@@ -1,97 +1,280 @@
-<!DOCTYPE html><html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>LBR Enterprises</title>
-<meta name="viewport" content="width=device-width, initial-scale=1"><style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LBR Enterprises</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-body{
-font-family:Arial;
-margin:0;
-background:#f5f5f5;
-}
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      color: #222;
+    }
 
-header{
-background:black;
-color:white;
-padding:20px;
-text-align:center;
-}
+    header {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 24px 16px;
+    }
 
-.products{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-padding:30px;
-}
+    header h1 {
+      margin: 0 0 8px;
+      font-size: 32px;
+    }
 
-.card{
-background:white;
-padding:20px;
-border-radius:10px;
-box-shadow:0 5px 10px rgba(0,0,0,0.1);
-}
+    header p {
+      margin: 0;
+      font-size: 16px;
+    }
 
-button{
-background:green;
-color:white;
-padding:10px 15px;
-border:none;
-border-radius:5px;
-cursor:pointer;
-}
+    .hero {
+      background: white;
+      text-align: center;
+      padding: 30px 16px;
+      border-bottom: 1px solid #ddd;
+    }
 
-.map{
-padding:30px;
-}
+    .hero h2 {
+      margin-top: 0;
+      font-size: 28px;
+      color: #e67e22;
+    }
 
-footer{
-background:black;
-color:white;
-padding:20px;
-text-align:center;
-}
+    .hero p {
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
 
-</style></head><body><header><h1>LBR Enterprises</h1><p>Atta • Sarso Oil • Chokar • Khali Supplier</p></header><section class="products"><div class="card">
-<h3>Atta</h3>
-<p>₹31 / kg</p>
-<button onclick="order('Atta')">Order on WhatsApp</button>
-</div><div class="card">
-<h3>Sarso Oil</h3>
-<p>₹175 / liter | ₹200 / kg</p>
-<button onclick="order('Sarso Oil')">Order on WhatsApp</button>
-</div><div class="card">
-<h3>Chokar</h3>
-<p>₹22 / kg</p>
-<button onclick="order('Chokar')">Order on WhatsApp</button>
-</div><div class="card">
-<h3>Khali</h3>
-<p>₹23 / kg</p>
-<button onclick="order('Khali')">Order on WhatsApp</button>
-</div></section><div class="map"><h2>Location</h2><p>Village – Bheldi
-<br>
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      padding: 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
 
-Post Office – Bheldi
-<br>
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
+      text-align: center;
+    }
 
-Pincode – 841402
-<br>
+    .card h3 {
+      margin-top: 0;
+      color: #111;
+    }
 
-Landmark – Ambedkar Statue
+    .price {
+      font-size: 18px;
+      font-weight: bold;
+      color: #e67e22;
+      margin: 10px 0 16px;
+    }
 
-</p><iframewidth="100%"
+    .btn {
+      display: inline-block;
+      background: green;
+      color: white;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 14px;
+    }
 
-height="300"
+    .btn:hover {
+      background: #0b7a0b;
+    }
 
-src="https://maps.google.com/maps?q=Ambedkar%20Statue%20Bheldi%20Bihar%20841402&t=&z=14&ie=UTF8&iwloc=&output=embed">
+    .section {
+      background: white;
+      margin: 20px auto;
+      padding: 30px 20px;
+      max-width: 1200px;
+      border-radius: 12px;
+      box-shadow: 0 5px 12px rgba(0, 0, 0, 0.06);
+    }
 
-</iframe></div><footer><p>Contact: 9934034833</p><p>UPI: 99340348332@ybl</p></footer><script>
+    .section h2 {
+      margin-top: 0;
+      color: #111;
+    }
 
-function order(product){
+    .info-list p {
+      margin: 8px 0;
+      line-height: 1.6;
+    }
 
-let msg="Hello LBR Enterprises I want to order "+product;
+    .delivery-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 15px;
+    }
 
-window.open("https://wa.me/919934034833?text="+msg);
+    .tag {
+      background: #f3f3f3;
+      border: 1px solid #ddd;
+      padding: 8px 12px;
+      border-radius: 20px;
+      font-size: 14px;
+    }
 
-}
+    .payment-box {
+      background: #fff8e8;
+      border: 1px solid #f0d9a8;
+      padding: 14px;
+      border-radius: 10px;
+      margin-top: 15px;
+    }
 
-</script></body>
+    iframe {
+      width: 100%;
+      height: 320px;
+      border: 0;
+      border-radius: 10px;
+      margin-top: 15px;
+    }
+
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 20px 16px;
+      margin-top: 30px;
+    }
+
+    footer p {
+      margin: 6px 0;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 26px;
+      }
+
+      .hero h2 {
+        font-size: 22px;
+      }
+
+      .products {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>LBR Enterprises</h1>
+    <p>Atta • Sarso Oil • Chokar • Khali Supplier</p>
+  </header>
+
+  <section class="hero">
+    <h2>Welcome to LBR Enterprises</h2>
+    <p>
+      हम लोकल एरिया और आसपास के जिलों में आटा, सरसों तेल, चोकर और खली की सप्लाई करते हैं।
+      थोक और रिटेल दोनों ऑर्डर लिए जाते हैं। WhatsApp के जरिए सीधे ऑर्डर कर सकते हैं।
+    </p>
+  </section>
+
+  <section class="products">
+    <div class="card">
+      <h3>आटा (Atta)</h3>
+      <div class="price">₹31 / kg</div>
+      <button class="btn" onclick="orderProduct('आटा (Atta) - ₹31/kg')">Order on WhatsApp</button>
+    </div>
+
+    <div class="card">
+      <h3>सरसों तेल (Sarso Oil)</h3>
+      <div class="price">₹175 / liter | ₹200 / kg</div>
+      <button class="btn" onclick="orderProduct('सरसों तेल (Sarso Oil) - ₹175/liter | ₹200/kg')">Order on WhatsApp</button>
+    </div>
+
+    <div class="card">
+      <h3>चोकर (Chokar)</h3>
+      <div class="price">₹22 / kg</div>
+      <button class="btn" onclick="orderProduct('चोकर (Chokar) - ₹22/kg')">Order on WhatsApp</button>
+    </div>
+
+    <div class="card">
+      <h3>खली (Khali)</h3>
+      <div class="price">₹23 / kg</div>
+      <button class="btn" onclick="orderProduct('खली (Khali) - ₹23/kg')">Order on WhatsApp</button>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Delivery Area</h2>
+    <p>लोकल एरिया में तेज सप्लाई और bulk order के लिए खास व्यवस्था।</p>
+    <div class="delivery-tags">
+      <span class="tag">Saran</span>
+      <span class="tag">Vaishali</span>
+      <span class="tag">Patna</span>
+      <span class="tag">Chapra</span>
+      <span class="tag">Hajipur</span>
+      <span class="tag">Muzaffarpur</span>
+      <span class="tag">Siwan</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Address / Location</h2>
+    <div class="info-list">
+      <p><strong>Village:</strong> Bheldi</p>
+      <p><strong>Post Office:</strong> Bheldi</p>
+      <p><strong>Pincode:</strong> 841402</p>
+      <p><strong>Landmark:</strong> Ambedkar Statue</p>
+      <p><strong>Mobile:</strong> 9934034833</p>
+    </div>
+
+    <iframe
+      src="https://maps.google.com/maps?q=Ambedkar%20Statue%20Bheldi%20Bihar%20841402&t=&z=14&ie=UTF8&iwloc=&output=embed"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="LBR Enterprises Location">
+    </iframe>
+  </section>
+
+  <section class="section">
+    <h2>Payment Options</h2>
+    <p>आप WhatsApp पर ऑर्डर भेज सकते हैं। पेमेंट UPI या Cash on Delivery से लिया जा सकता है।</p>
+
+    <div class="payment-box">
+      <p><strong>UPI ID:</strong> 99340348332@ybl</p>
+      <p><strong>WhatsApp Order:</strong> 9934034833</p>
+    </div>
+
+    <p style="margin-top: 20px;">
+      <a class="btn" href="https://wa.me/919934034833?text=Hello%20LBR%20Enterprises%2C%20I%20want%20to%20place%20an%20order." target="_blank">
+        WhatsApp पर ऑर्डर करें
+      </a>
+    </p>
+  </section>
+
+  <footer>
+    <p>© 2026 LBR Enterprises. All rights reserved.</p>
+    <p>Atta • Sarso Oil • Chokar • Khali • Local Orders • District Delivery • Wholesale</p>
+  </footer>
+
+  <script>
+    function orderProduct(product) {
+      const msg = "Hello LBR Enterprises, I want to order " + product;
+      const url = "https://wa.me/919934034833?text=" + encodeURIComponent(msg);
+      window.open(url, "_blank");
+    }
+  </script>
+
+</body>
 </html>
