@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LBR Enterprises</title>
+  <title>LBR Enterprises | Atta, Sarso Oil, Chokar, Khali Supplier</title>
+  <meta name="description" content="LBR Enterprises - Atta, Sarso Oil, Chokar aur Khali ki local aur wholesale supply. Village Bheldi, Post Office Bheldi, Pincode 841402." />
   <style>
     * {
       box-sizing: border-box;
@@ -12,269 +13,656 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #f5f5f5;
+      background: #f7f7f7;
       color: #222;
     }
 
-    header {
+    a {
+      text-decoration: none;
+    }
+
+    .topbar {
       background: #111;
-      color: white;
+      color: #fff;
+      padding: 10px 16px;
       text-align: center;
-      padding: 24px 16px;
+      font-size: 14px;
     }
 
-    header h1 {
-      margin: 0 0 8px;
-      font-size: 32px;
+    header {
+      background: linear-gradient(135deg, #fff7ed, #ffffff, #ffedd5);
+      border-bottom: 1px solid #e5e7eb;
+      padding: 18px 16px;
+      position: sticky;
+      top: 0;
+      z-index: 50;
     }
 
-    header p {
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 16px;
+    }
+
+    .header-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .logo-box {
+      width: 62px;
+      height: 62px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #f97316, #f59e0b);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 20px rgba(249, 115, 22, 0.25);
+      font-weight: bold;
+      text-align: center;
+      line-height: 1.1;
+      flex-shrink: 0;
+    }
+
+    .logo-box span {
+      display: block;
+      font-size: 10px;
+      letter-spacing: 2px;
+      margin-top: 2px;
+    }
+
+    .brand h1 {
       margin: 0;
-      font-size: 16px;
+      font-size: 26px;
+      color: #111827;
+    }
+
+    .brand p {
+      margin: 4px 0 0;
+      color: #6b7280;
+      font-size: 14px;
+    }
+
+    .header-buttons {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 14px;
+      border: none;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background: #f97316;
+      color: #fff;
+    }
+
+    .btn-dark {
+      background: #111827;
+      color: #fff;
+    }
+
+    .btn-green {
+      background: #16a34a;
+      color: #fff;
     }
 
     .hero {
-      background: white;
-      text-align: center;
-      padding: 30px 16px;
-      border-bottom: 1px solid #ddd;
+      padding: 50px 0 30px;
+      background: linear-gradient(135deg, #fff7ed, #ffffff);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 24px;
+      align-items: center;
     }
 
     .hero h2 {
-      margin-top: 0;
-      font-size: 28px;
-      color: #e67e22;
+      font-size: 42px;
+      margin: 0 0 14px;
+      color: #111827;
+      line-height: 1.15;
+    }
+
+    .hero h2 span {
+      color: #ea580c;
+      display: block;
     }
 
     .hero p {
-      max-width: 800px;
-      margin: 0 auto;
+      color: #4b5563;
+      font-size: 17px;
+      line-height: 1.7;
+      margin: 0 0 20px;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .tag {
+      background: #fff;
+      border: 1px solid #fed7aa;
+      color: #c2410c;
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.03);
+    }
+
+    .hero-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .mini-card {
+      background: #fff;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+      border: 1px solid #f3f4f6;
+    }
+
+    .mini-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .mini-card .info {
+      padding: 12px;
+    }
+
+    .mini-card .title {
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .mini-card .price {
+      color: #ea580c;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .section {
+      padding: 40px 0;
+    }
+
+    .section-title {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: end;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .section-title h3 {
+      margin: 0;
+      font-size: 30px;
+      color: #111827;
+    }
+
+    .section-title p {
+      margin: 0;
+      color: #6b7280;
+      max-width: 700px;
       line-height: 1.6;
     }
 
     .products {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(4, 1fr);
       gap: 20px;
-      padding: 30px;
-      max-width: 1200px;
-      margin: auto;
     }
 
     .card {
-      background: white;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
-      text-align: center;
+      background: #fff;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.07);
+      border: 1px solid #ececec;
+      transition: transform 0.25s ease;
     }
 
-    .card h3 {
-      margin-top: 0;
-      color: #111;
+    .card:hover {
+      transform: translateY(-4px);
     }
 
-    .price {
-      font-size: 18px;
-      font-weight: bold;
-      color: #e67e22;
-      margin: 10px 0 16px;
+    .card img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+      display: block;
     }
 
-    .btn {
+    .card-body {
+      padding: 18px;
+    }
+
+    .badge {
       display: inline-block;
-      background: green;
-      color: white;
-      padding: 10px 16px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      text-decoration: none;
+      background: #fff7ed;
+      color: #c2410c;
+      border: 1px solid #fed7aa;
+      font-size: 12px;
+      padding: 7px 10px;
+      border-radius: 999px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .card h4 {
+      margin: 0 0 8px;
+      font-size: 21px;
+      color: #111827;
+    }
+
+    .card p {
+      margin: 0 0 12px;
+      color: #6b7280;
+      line-height: 1.6;
       font-size: 14px;
     }
 
-    .btn:hover {
-      background: #0b7a0b;
+    .product-price {
+      color: #ea580c;
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 14px;
     }
 
-    .section {
-      background: white;
-      margin: 20px auto;
-      padding: 30px 20px;
-      max-width: 1200px;
-      border-radius: 12px;
-      box-shadow: 0 5px 12px rgba(0, 0, 0, 0.06);
+    .card-buttons {
+      display: grid;
+      gap: 10px;
     }
 
-    .section h2 {
-      margin-top: 0;
-      color: #111;
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
     }
 
-    .info-list p {
-      margin: 8px 0;
+    .info-box {
+      background: #fff;
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+      border: 1px solid #ececec;
+    }
+
+    .info-box h4 {
+      margin: 0 0 10px;
+      font-size: 22px;
+      color: #111827;
+    }
+
+    .info-box p {
+      margin: 0 0 12px;
+      color: #6b7280;
       line-height: 1.6;
     }
 
-    .delivery-tags {
+    .delivery-list {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-top: 15px;
+      margin-top: 12px;
     }
 
-    .tag {
-      background: #f3f3f3;
-      border: 1px solid #ddd;
+    .delivery-item {
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
       padding: 8px 12px;
-      border-radius: 20px;
-      font-size: 14px;
+      border-radius: 999px;
+      font-size: 13px;
     }
 
-    .payment-box {
-      background: #fff8e8;
-      border: 1px solid #f0d9a8;
-      padding: 14px;
+    .form-map-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .order-form,
+    .map-box {
+      background: #fff;
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+      border: 1px solid #ececec;
+    }
+
+    .order-form h4,
+    .map-box h4 {
+      margin: 0 0 14px;
+      font-size: 24px;
+      color: #111827;
+    }
+
+    .input,
+    .textarea {
+      width: 100%;
+      padding: 13px 14px;
+      margin-bottom: 12px;
       border-radius: 10px;
-      margin-top: 15px;
+      border: 1px solid #d1d5db;
+      font-size: 14px;
+      font-family: Arial, sans-serif;
+    }
+
+    .textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .map-box p {
+      color: #6b7280;
+      line-height: 1.7;
     }
 
     iframe {
       width: 100%;
       height: 320px;
       border: 0;
-      border-radius: 10px;
-      margin-top: 15px;
+      border-radius: 12px;
+      margin-top: 14px;
     }
 
     footer {
-      background: #111;
-      color: white;
-      text-align: center;
-      padding: 20px 16px;
+      background: #111827;
+      color: #fff;
       margin-top: 30px;
+      padding: 24px 16px;
     }
 
-    footer p {
-      margin: 6px 0;
+    .footer-wrap {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      font-size: 14px;
     }
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 26px;
+    .footer-wrap p {
+      margin: 0;
+      color: #d1d5db;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 1024px) {
+      .products {
+        grid-template-columns: repeat(2, 1fr);
       }
 
+      .info-grid,
+      .form-map-grid,
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
       .hero h2 {
+        font-size: 30px;
+      }
+
+      .brand h1 {
         font-size: 22px;
       }
 
       .products {
-        padding: 20px;
+        grid-template-columns: 1fr;
+      }
+
+      .hero-cards {
+        grid-template-columns: 1fr;
+      }
+
+      .section-title h3 {
+        font-size: 24px;
       }
     }
   </style>
 </head>
 <body>
 
+  <div class="topbar">
+    Local Delivery • Wholesale Supply • Trusted Quality
+  </div>
+
   <header>
-    <h1>LBR Enterprises</h1>
-    <p>Atta • Sarso Oil • Chokar • Khali Supplier</p>
+    <div class="container header-wrap">
+      <div class="brand">
+        <div class="logo-box">
+          <div>
+            LBR
+            <span>ENTERPRISES</span>
+          </div>
+        </div>
+        <div>
+          <h1>LBR Enterprises</h1>
+          <p>Atta • Sarso Oil • Chokar • Khali Supplier</p>
+        </div>
+      </div>
+
+      <div class="header-buttons">
+        <a class="btn btn-primary" href="#products">View Products</a>
+        <a class="btn btn-green" href="https://wa.me/919934034833?text=Hello%20LBR%20Enterprises%2C%20I%20want%20to%20place%20an%20order." target="_blank">WhatsApp Order</a>
+      </div>
+    </div>
   </header>
 
   <section class="hero">
-    <h2>Welcome to LBR Enterprises</h2>
-    <p>
-      हम लोकल एरिया और आसपास के जिलों में आटा, सरसों तेल, चोकर और खली की सप्लाई करते हैं।
-      थोक और रिटेल दोनों ऑर्डर लिए जाते हैं। WhatsApp के जरिए सीधे ऑर्डर कर सकते हैं।
-    </p>
-  </section>
+    <div class="container hero-grid">
+      <div>
+        <h2>
+          अपने प्रोडक्ट को
+          <span>ऑनलाइन बेचिए</span>
+        </h2>
+        <p>
+          LBR Enterprises के साथ आटा, सरसों तेल, चोकर और खली की लोकल और थोक सप्लाई।
+          आप WhatsApp के जरिए direct order भेज सकते हैं। Mobile-friendly business website,
+          local delivery और bulk order support के साथ।
+        </p>
 
-  <section class="products">
-    <div class="card">
-      <h3>आटा (Atta)</h3>
-      <div class="price">₹31 / kg</div>
-      <button class="btn" onclick="orderProduct('आटा (Atta) - ₹31/kg')">Order on WhatsApp</button>
-    </div>
+        <div class="header-buttons">
+          <a class="btn btn-primary" href="#products">अभी खरीदें</a>
+          <a class="btn btn-dark" href="https://wa.me/919934034833?text=Hello%20LBR%20Enterprises%2C%20I%20want%20to%20know%20more%20about%20your%20products." target="_blank">WhatsApp पर पूछें</a>
+        </div>
 
-    <div class="card">
-      <h3>सरसों तेल (Sarso Oil)</h3>
-      <div class="price">₹175 / liter | ₹200 / kg</div>
-      <button class="btn" onclick="orderProduct('सरसों तेल (Sarso Oil) - ₹175/liter | ₹200/kg')">Order on WhatsApp</button>
-    </div>
+        <div class="hero-tags">
+          <span class="tag">7+ जिले में डिलीवरी</span>
+          <span class="tag">भरोसेमंद क्वालिटी</span>
+          <span class="tag">थोक रेट उपलब्ध</span>
+        </div>
+      </div>
 
-    <div class="card">
-      <h3>चोकर (Chokar)</h3>
-      <div class="price">₹22 / kg</div>
-      <button class="btn" onclick="orderProduct('चोकर (Chokar) - ₹22/kg')">Order on WhatsApp</button>
-    </div>
+      <div class="hero-cards">
+        <div class="mini-card">
+          <img src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec?auto=format&fit=crop&w=900&q=80" alt="Atta" />
+          <div class="info">
+            <div class="title">LBR शुद्ध आटा</div>
+            <div class="price">₹31 / kg</div>
+          </div>
+        </div>
 
-    <div class="card">
-      <h3>खली (Khali)</h3>
-      <div class="price">₹23 / kg</div>
-      <button class="btn" onclick="orderProduct('खली (Khali) - ₹23/kg')">Order on WhatsApp</button>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>Delivery Area</h2>
-    <p>लोकल एरिया में तेज सप्लाई और bulk order के लिए खास व्यवस्था।</p>
-    <div class="delivery-tags">
-      <span class="tag">Saran</span>
-      <span class="tag">Vaishali</span>
-      <span class="tag">Patna</span>
-      <span class="tag">Chapra</span>
-      <span class="tag">Hajipur</span>
-      <span class="tag">Muzaffarpur</span>
-      <span class="tag">Siwan</span>
+        <div class="mini-card">
+          <img src="https://images.unsplash.com/photo-1514996937319-344454492b37?auto=format&fit=crop&w=900&q=80" alt="Mustard Oil" />
+          <div class="info">
+            <div class="title">LBR सरसों तेल</div>
+            <div class="price">₹175 / liter</div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <section class="section">
-    <h2>Address / Location</h2>
-    <div class="info-list">
-      <p><strong>Village:</strong> Bheldi</p>
-      <p><strong>Post Office:</strong> Bheldi</p>
-      <p><strong>Pincode:</strong> 841402</p>
-      <p><strong>Landmark:</strong> Ambedkar Statue</p>
-      <p><strong>Mobile:</strong> 9934034833</p>
-    </div>
+    <div class="container">
+      <div class="section-title">
+        <div>
+          <h3 id="products">मुख्य प्रोडक्ट</h3>
+        </div>
+        <p>
+          यहाँ आपके main products, updated rates, WhatsApp enquiry और local order flow एक साथ दिखते हैं।
+        </p>
+      </div>
 
-    <iframe
-      src="https://maps.google.com/maps?q=Ambedkar%20Statue%20Bheldi%20Bihar%20841402&t=&z=14&ie=UTF8&iwloc=&output=embed"
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-      title="LBR Enterprises Location">
-    </iframe>
+      <div class="products">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec?auto=format&fit=crop&w=900&q=80" alt="Atta" />
+          <div class="card-body">
+            <div class="badge">Best Seller</div>
+            <h4>आटा (Atta)</h4>
+            <p>ताज़ा पिसा हुआ, साफ और भरोसेमंद घरेलू आटा।</p>
+            <div class="product-price">₹31 / kg</div>
+            <div class="card-buttons">
+              <a class="btn btn-dark" href="https://wa.me/919934034833?text=Hello%20LBR%20Enterprises%2C%20I%20want%20to%20order%20Atta%20-%20%E2%82%B931%2Fkg." target="_blank">Order on WhatsApp</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1514996937319-344454492b37?auto=format&fit=crop&w=900&q=80" alt="Sarso Oil" />
+          <div class="card-body">
+            <div class="badge">Purity Assured</div>
+            <h4>सरसों तेल (Sarso Oil)</h4>
+            <p>खाने के लिए शुद्ध और मजबूत खुशबू वाला सरसों तेल।</p>
+            <div class="product-price">₹175 / liter | ₹200 / kg</div>
+            <div class="card-buttons">
+              <a class="btn btn-dark" href="https://wa.me/919934034833?text=Hello%20LBR%20Enterprises%2C%20I%20want%20to%20order%20Sarso%20Oil%20-%20%E2%82%B9175%2Fliter%20or%20%E2%82%B9200%2Fkg." target="_blank">Order on WhatsApp</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=900&q=80" alt="Chokar" />
+          <div class="card-body">
+            <div class="badge">Bulk Orders</div>
+            <h4>चोकर (Chokar)</h4>
+            <p>डेयरी और पशुपालन के लिए पौष्टिक और उपयोगी चोकर।</p>
+            <div class="product-price">₹22 / kg</div>
+            <div class="card-buttons">
+              <a class="btn btn-dark" href="https://wa.me/919934034833?text=Hello%20LBR%20Enterprises%2C%20I%20want%20to%20order%20Chokar%20-%20%E2%82%B922%2Fkg." target="_blank">Order on WhatsApp</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=900&q=80" alt="Khali" />
+          <div class="card-body">
+            <div class="badge">In Demand</div>
+            <h4>खली (Khali)</h4>
+            <p>पशु आहार और थोक सप्लाई के लिए उपयोगी खली।</p>
+            <div class="product-price">₹23 / kg</div>
+            <div class="card-buttons">
+              <a class="btn btn-dark" href="https://wa.me/919934034833?text=Hello%20LBR%20Enterprises%2C%20I%20want%20to%20order%20Khali%20-%20%E2%82%B923%2Fkg." target="_blank">Order on WhatsApp</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <section class="section">
-    <h2>Payment Options</h2>
-    <p>आप WhatsApp पर ऑर्डर भेज सकते हैं। पेमेंट UPI या Cash on Delivery से लिया जा सकता है।</p>
+    <div class="container info-grid">
+      <div class="info-box">
+        <h4>Payment Options</h4>
+        <p>UPI, Cash on Delivery और direct WhatsApp order की सुविधा उपलब्ध है।</p>
+        <div class="payment-box">
+          <p><strong>UPI ID:</strong> 99340348332@ybl</p>
+          <p><strong>WhatsApp Order:</strong> 9934034833</p>
+        </div>
+      </div>
 
-    <div class="payment-box">
-      <p><strong>UPI ID:</strong> 99340348332@ybl</p>
-      <p><strong>WhatsApp Order:</strong> 9934034833</p>
+      <div class="info-box">
+        <h4>District-wise Delivery</h4>
+        <p>लोकल एरिया में तेज सप्लाई और bulk order के लिए खास व्यवस्था।</p>
+        <div class="delivery-list">
+          <span class="delivery-item">Saran</span>
+          <span class="delivery-item">Vaishali</span>
+          <span class="delivery-item">Patna</span>
+          <span class="delivery-item">Chapra</span>
+          <span class="delivery-item">Hajipur</span>
+          <span class="delivery-item">Muzaffarpur</span>
+          <span class="delivery-item">Siwan</span>
+        </div>
+      </div>
+
+      <div class="info-box">
+        <h4>Bulk Orders</h4>
+        <p>थोक ऑर्डर, लोकल सप्लाई और regular delivery के लिए direct WhatsApp enquiry भेजें।</p>
+        <a class="btn btn-green" href="https://wa.me/919934034833?text=Hello%20LBR%20Enterprises%2C%20I%20want%20to%20place%20a%20bulk%20order." target="_blank">Bulk Order on WhatsApp</a>
+      </div>
     </div>
+  </section>
 
-    <p style="margin-top: 20px;">
-      <a class="btn" href="https://wa.me/919934034833?text=Hello%20LBR%20Enterprises%2C%20I%20want%20to%20place%20an%20order." target="_blank">
-        WhatsApp पर ऑर्डर करें
-      </a>
-    </p>
+  <section class="section">
+    <div class="container form-map-grid">
+      <div class="order-form">
+        <h4>Order / Enquiry</h4>
+        <input class="input" type="text" placeholder="पूरा नाम" />
+        <input class="input" type="text" placeholder="मोबाइल नंबर" />
+        <input class="input" type="text" placeholder="पूरा पता / गांव / जिला" />
+        <textarea class="textarea" placeholder="कौन सा प्रोडक्ट चाहिए और कितनी मात्रा में?"></textarea>
+        <a class="btn btn-primary" href="https://wa.me/919934034833?text=Hello%20LBR%20Enterprises%2C%20I%20want%20to%20send%20an%20enquiry." target="_blank">WhatsApp से भेजें</a>
+      </div>
+
+      <div class="map-box">
+        <h4>Address / Location</h4>
+        <p>
+          <strong>Village:</strong> Bheldi<br>
+          <strong>Post Office:</strong> Bheldi<br>
+          <strong>Pincode:</strong> 841402<br>
+          <strong>Landmark:</strong> Ambedkar Statue<br>
+          <strong>Mobile:</strong> 9934034833
+        </p>
+
+        <iframe
+          src="https://maps.google.com/maps?q=Ambedkar%20Statue%20Bheldi%20Bihar%20841402&t=&z=14&ie=UTF8&iwloc=&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="LBR Enterprises Location">
+        </iframe>
+      </div>
+    </div>
   </section>
 
   <footer>
-    <p>© 2026 LBR Enterprises. All rights reserved.</p>
-    <p>Atta • Sarso Oil • Chokar • Khali • Local Orders • District Delivery • Wholesale</p>
+    <div class="footer-wrap">
+      <p>© 2026 LBR Enterprises. All rights reserved.</p>
+      <p>Atta • Sarso Oil • Chokar • Khali • Local Orders • District Delivery • Wholesale</p>
+    </div>
   </footer>
-
-  <script>
-    function orderProduct(product) {
-      const msg = "Hello LBR Enterprises, I want to order " + product;
-      const url = "https://wa.me/919934034833?text=" + encodeURIComponent(msg);
-      window.open(url, "_blank");
-    }
-  </script>
 
 </body>
 </html>
